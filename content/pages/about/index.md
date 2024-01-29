@@ -14,10 +14,10 @@ socialImage: "./elite-gold-black.jpg"
     box-sizing: border-box;
   }
 
-  .agent-name {
-    font-size: 1.5em; /* Adjust the font size as needed */
-    margin-bottom: 5px; /* Add some bottom margin for spacing */
-  }
+.agent-name {
+  font-size: 1em; /* Adjust the font size as needed */
+  margin-bottom: 5px; /* Add some bottom margin for spacing */
+}
 
   .read-more-link {
     cursor: pointer;
@@ -259,7 +259,7 @@ socialImage: "./elite-gold-black.jpg"
 <div class="agent-container" id="agent-10">
   <div class="agent-info-container">
     <img src="https://raw.githubusercontent.com/charles-hood/redesign-elite-1/master/content/pages/about/katelynkiser.jpg" class="agent-info agent-image" />
-    <div class "agent-info">
+    <div class="agent-info"> <!-- Corrected the space before the class attribute here -->
       <span class="agent-name"><strong>Katelyn Kiser</strong></span>
       <span style="display: block;"><a href="mailto:Katelynkiser892@gmail.com">Katelynkiser892@gmail.com</a></span>
       <span style="display: block;"><a href="tel:7069782726">706-978-2726</a></span>
