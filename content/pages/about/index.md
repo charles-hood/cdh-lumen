@@ -14,56 +14,48 @@ socialImage: "./elite-gold-black.jpg"
     box-sizing: border-box;
   }
 
-  .agent-name {
-    font-size: 1em; /* Adjust the font size as needed */
-    margin-bottom: 5px; /* Add some bottom margin for spacing */
-  }
-
   .read-more-link {
     cursor: pointer;
     color: blue;
     text-decoration: underline;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .bio-toggle {
-    display: none;
-  }
-
-  .agent-info-container:target .agent-bio {
-    max-height: 100%;
-  }
-
-  .agent-info-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .agent-info {
-    padding: 10px;
-    text-align: center;
-  }
-
-  .agent-image {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
   }
 
   .agent-bio {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
+  }
+
+  .agent-info-container:focus-within .read-more-link {
+    display: none;
+  }
+
+  .agent-info-container:focus-within .agent-bio {
+    max-height: 100%;
+  }
+
+  .agent-info-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .agent-info {
+    flex-grow: 1;
+    padding: 0 10px;
+  }
+
+  .agent-image {
     width: 100%;
-    text-align: left;
+    max-width: 250px;
+    height: auto;
+    order: -1; /* Move the image to the left */
   }
 
   @media only screen and (max-width: 600px) {
     .agent-info-container {
+      align-items: center;
       flex-direction: column;
     }
 
@@ -77,39 +69,35 @@ socialImage: "./elite-gold-black.jpg"
   }
 </style>
 
-<!-- Agent Sections -->
-<!-- Repeat this section for each agent -->
-
 <!-- Agent 1 -->
-<div class="agent-container" id="agent-1">
-  <div class="agent-info-container">
+<div class="agent-container">
+  <div class="agent-info-container" tabindex="0">
     <img src="https://raw.githubusercontent.com/charles-hood/redesign-elite-1/master/content/pages/about/tracylee.jpg" class="agent-info agent-image" />
     <div class="agent-info">
-      <span class="agent-name"><strong>Tracy Lee</strong></span>
+      <span style="display: block;"><strong>Tracy Lee</strong></span>
       <span style="display: block;"><a href="mailto:tracylee.elite@gmail.com">tracylee.elite@gmail.com</a></span>
       <span style="display: block;"><a href="tel:4236532960">(423)653-2960</a></span>
-    </div>
-    <input type="checkbox" id="bio-toggle-1" class="bio-toggle">
-    <label for="bio-toggle-1" class="read-more-link"><a href="#agent-1">Read Agent Bio</a></label>
-    <div class="agent-bio">
-      <p>
-        Tracy Lee is an active Realtor and the owner of Elite Realtors LLC. Established in 2020 to bring buying and selling back to putting clients first! Mother of three with degrees in business management, allied sciences, and a background in personal training. Her accomplishments range from Masters Club to Regional multi-million dollar producers club with approximately 40-60 transactions per year.
-        She specializes in relocation families, first-time home buyers, and new construction homes. Her priority is quality, and she handles every transaction from start to close.
-      </p>
+      <label class="read-more-link">Read Agent Bio</label>
+      <div class="agent-bio">
+        <p>
+          Tracy Lee is an active Realtor and the owner of Elite Realtors LLC. Established in 2020 to bring buying and selling back to putting clients first! Mother of three with degrees in business management, allied sciences, and a background in personal training. Her accomplishments range from Masters Club to Regional multi-million dollar producers club with approximately 40-60 transactions per year.
+          She specializes in relocation families, first-time home buyers, and new construction homes. Her priority is quality, and she handles every transaction from start to close.
+        </p>
+        <p>She specializes in relocation families, first-time home buyers, and new construction homes. Her priority is quality, and she handles every transaction from start to close.</p>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- Agent 2 -->
-<div class="agent-container" id="agent-2">
-  <div class="agent-info-container">
+<div class="agent-container">
+  <div class="agent-info-container" tabindex="0">
     <img src="https://raw.githubusercontent.com/charles-hood/redesign-elite-1/master/content/pages/about/bonniehood.jpg" class="agent-info agent-image" />
     <div class="agent-info">
-      <span class="agent-name"><strong>Bonnie Hood</strong></span>
+      <span style="display: block;"><strong>Bonnie Hood</strong></span>
       <span style="display: block;"><a href="mailto:bonniehood.elite@gmail.com">bonniehood.elite@gmail.com</a></span>
       <span style="display: block;"><a href="tel:4234213946">(423) 421-3946</a></span>
-      <input type="checkbox" id="bio-toggle-2" class="bio-toggle">
-      <label for="bio-toggle-2" class="read-more-link"><a href="#agent-2">Read Agent Bio</a></label>
+      <label class="read-more-link">Read Agent Bio</label>
       <div class="agent-bio">
         <p>
           Bonnie is a native of North Georgia. She received her REALTOR license in 1997. After gaining valuable experience in real estate, she acquired her Broker’s license. She specializes in residential real estate in the Chattanooga, Tennessee and North Georgia Areas. Whether you are buying or selling your home, it can be a stressful task. So, as your REALTOR, her job is to take the stress out of your hand. Communication is a vital factor to success in Real Estate. That’s why she communicates every step of the way. That gives you assurance knowing that she’s there to guide you. Her goal is to satisfy your needs, whether it is your first home or your last home. She will always put herself in your shoes.
@@ -121,15 +109,14 @@ socialImage: "./elite-gold-black.jpg"
 </div>
 
 <!-- Agent 3 -->
-<div class="agent-container" id="agent-3">
-  <div class="agent-info-container">
+<div class="agent-container">
+  <div class="agent-info-container" tabindex="0">
     <img src="https://raw.githubusercontent.com/charles-hood/redesign-elite-1/master/content/pages/about/stanhood.jpg" class="agent-info agent-image" />
     <div class="agent-info">
-      <span class="agent-name"><strong>Stan Hood</strong></span>
+      <span style="display: block;"><strong>Stan Hood</strong></span>
       <span style="display: block;"><a href="mailto:stanhood.elite@gmail.com">stanhood.elite@gmail.com</a></span>
       <span style="display: block;"><a href="tel:4234439278">(423) 443-9278</a></span>
-      <input type="checkbox" id="bio-toggle-3" class="bio-toggle">
-      <label for="bio-toggle-3" class="read-more-link"><a href="#agent-3">Read Agent Bio</a></label>
+      <label class="read-more-link">Read Agent Bio</label>
       <div class="agent-bio">
         <p>
           Stan received his license in 2006 but took a break from real estate in 2010. He returned to real estate in 2019 to work with his wife as a team.
@@ -141,15 +128,14 @@ socialImage: "./elite-gold-black.jpg"
 </div>
 
 <!-- Agent 4 -->
-<div class="agent-container" id="agent-4">
-  <div class="agent-info-container">
+<div class="agent-container">
+  <div class="agent-info-container" tabindex="0">
     <img src="https://raw.githubusercontent.com/charles-hood/redesign-elite-1/master/content/pages/about/lisaheadrick.jpg" class="agent-info agent-image" />
     <div class="agent-info">
-      <span class="agent-name"><strong>Lisa Headrick</strong></span>
+      <span style="display: block;"><strong>Lisa Headrick</strong></span>
       <span style="display: block;"><a href="mailto:lheadrick24@aol.com">lheadrick24@aol.com</a></span>
       <span style="display: block;"><a href="tel:4235938052">(423) 593-8052</a></span>
-      <input type="checkbox" id="bio-toggle-4" class="bio-toggle">
-      <label for="bio-toggle-4" class="read-more-link"><a href="#agent-4">Read Agent Bio</a></label>
+      <label class="read-more-link">Read Agent Bio</label>
       <div class="agent-bio">
         <p>
           Lisa is a lifelong resident of Northwest GA and is very passionate about the well-being of the citizens of this area and is very involved with the thriving business community. As a business professional in Catoosa County, both as an Assistant Deputy Tax Commissioner and real estate broker in Georgia and Tennessee for over 20 years, her personal and professional connections and knowledge of the area work in her favor to help with the smooth sell of your home or find the perfect lifetime investment.
@@ -161,15 +147,14 @@ socialImage: "./elite-gold-black.jpg"
 </div>
 
 <!-- Agent 5 -->
-<div class="agent-container" id="agent-5">
-  <div class="agent-info-container">
+<div class="agent-container">
+  <div class="agent-info-container" tabindex="0">
     <img src="https://raw.githubusercontent.com/charles-hood/redesign-elite-1/master/content/pages/about/deeannsturdivant.jpg" class="agent-info agent-image" />
     <div class="agent-info">
-      <span class="agent-name"><strong>DeeAnn Sturdivant</strong></span>
+      <span style="display: block;"><strong>DeeAnn Sturdivant</strong></span>
       <span style="display: block;"><a href="mailto:Nextsteprealtyga@gmail.com">Nextsteprealtyga@gmail.com</a></span>
       <span style="display: block;"><a href="tel:4043682359">(404) 368-2359</a></span>
-      <input type="checkbox" id="bio-toggle-5" class="bio-toggle">
-      <label for="bio-toggle-5" class="read-more-link"><a href="#agent-5">Read Agent Bio</a></label>
+      <label class="read-more-link">Read Agent Bio</label>
       <div class="agent-bio">
         <p>
           DeeAnn is a lifelong resident of Georgia. Her background in real estate began with 24 years as a Real Estate Paralegal. Her love for real estate and passion for people and relationships built is what has driven her to become a Realtor. The knowledge she has gained over the years makes her a valuable asset to anyone looking to buy or sell. Your best interest is her only interest. As a mother of 5 boys, she understands family values and your family will be her priority. Let her show you and your family the way to home ownership!
@@ -180,15 +165,14 @@ socialImage: "./elite-gold-black.jpg"
 </div>
 
 <!-- Agent 6 -->
-<div class="agent-container" id="agent-6">
-  <div class="agent-info-container">
+<div class="agent-container">
+  <div class="agent-info-container" tabindex="0">
     <img src="https://raw.githubusercontent.com/charles-hood/redesign-elite-1/master/content/pages/about/havencox.jpg" class="agent-info agent-image" />
     <div class="agent-info">
-      <span class="agent-name"><strong>Haven Cox</strong></span>
+      <span style="display: block;"><strong>Haven Cox</strong></span>
       <span style="display: block;"><a href="mailto:havensellshomes@gmail.com">havensellshomes@gmail.com</a></span>
       <span style="display: block;"><a href="tel:4238273666">(423) 827-3666</a></span>
-      <input type="checkbox" id="bio-toggle-6" class="bio-toggle">
-      <label for="bio-toggle-6" class="read-more-link"><a href="#agent-6">Read Agent Bio</a></label>
+      <label class="read-more-link">Read Agent Bio</label>
       <div class="agent-bio">
         <p>
           Haven is new to Real Estate but has brought with her over a decade of financing and several years as a contractor in the North Georgia area. This motivated Haven to become a Realtor and to put all her knowledge to work for others. Haven currently resides in Tennessee, where she, her husband of 28 years and 2 children live along the Tennessee river. If you are looking to buy or sell a home in Tennessee, Haven is always ready to make that a peaceful process.
@@ -199,15 +183,14 @@ socialImage: "./elite-gold-black.jpg"
 </div>
 
 <!-- Agent 7 -->
-<div class="agent-container" id="agent-7">
-  <div class="agent-info-container">
+<div class="agent-container">
+  <div class="agent-info-container" tabindex="0">
     <img src="https://raw.githubusercontent.com/charles-hood/redesign-elite-1/master/content/pages/about/tylerpayne.jpg" class="agent-info agent-image" />
     <div class="agent-info">
-      <span class="agent-name"><strong>Tyler Payne</strong></span>
+      <span style="display: block;"><strong>Tyler Payne</strong></span>
       <span style="display: block;"><a href="mailto:Paynetyler111@gmail.com">Paynetyler111@gmail.com</a></span>
       <span style="display: block;"><a href="tel:423-508-4136">423-508-4136</a></span>
-      <input type="checkbox" id="bio-toggle-7" class="bio-toggle">
-      <label for="bio-toggle-7" class="read-more-link"><a href="#agent-7">Read Agent Bio</a></label>
+      <label class="read-more-link">Read Agent Bio</label>
       <div class="agent-bio">
         <p>
           At the end of 2020, Tyler initially began investing in real estate before ultimately deciding to pursue real estate as his full-time career. Over the past year, he has developed relationships that have thrust him even deeper into discovering his passion for real estate. He received his license in March of 2021. Tyler graduated from The McCallie School in 2015, and then attended Lee University where he played baseball for four years and graduated with a degree in Business Finance. As a lifelong resident of the North Georgia and Greater Chattanooga areas, Tyler brings a deep understanding of the community that surrounds it.
@@ -218,15 +201,14 @@ socialImage: "./elite-gold-black.jpg"
 </div>
 
 <!-- Agent 8 -->
-<div class="agent-container" id="agent-8">
-  <div class="agent-info-container">
+<div class="agent-container">
+  <div class="agent-info-container" tabindex="0">
     <img src="https://raw.githubusercontent.com/charles-hood/redesign-elite-1/master/content/pages/about/aricapatterson.jpg" class="agent-info agent-image" />
     <div class="agent-info">
-      <span class="agent-name"><strong>Arica Patterson</strong></span>
+      <span style="display: block;"><strong>Arica Patterson</strong></span>
       <span style="display: block;"><a href="mailto:apattersonhomes@gmail.com">apattersonhomes@gmail.com</a></span>
       <span style="display: block;"><a href="tel:423-645-5979">423-645-5979</a></span>
-      <input type="checkbox" id="bio-toggle-8" class="bio-toggle">
-      <label for="bio-toggle-8" class="read-more-link"><a href="#agent-8">Read Agent Bio</a></label>
+      <label class="read-more-link">Read Agent Bio</label>
       <div class="agent-bio">
         <p>
           My name is Arica Patterson. I am a devoted Christian, wife, and mother of three. I have been involved in real estate in some capacity my whole life. Most of my family is involved in real estate which has been instrumental in my success as a real estate agent. I am a firm believer in learning from the more experienced people around me. As I have watched and learned over the years I have been fortunate enough to be involved in every step of building a home as well as the remodeling process. As a result, when choosing a home or preparing a home for the market, I can offer my client the knowledge I have gained through my experiences. Buying or selling a home whether it is for you personally or as an investment is one of the biggest and most important decisions one will make. For this reason, I give each real estate transaction my full attention and do my very best to make the process a smooth and seamless transaction for all involved. I look forward to helping any real estate dreams become reality.
@@ -237,15 +219,14 @@ socialImage: "./elite-gold-black.jpg"
 </div>
 
 <!-- Agent 9 -->
-<div class="agent-container" id="agent-9">
-  <div class="agent-info-container">
+<div class="agent-container">
+  <div class="agent-info-container" tabindex="0">
     <img src="https://raw.githubusercontent.com/charles-hood/redesign-elite-1/master/content/pages/about/tonyablevins.jpg" class="agent-info agent-image" />
     <div class="agent-info">
-      <span class="agent-name"><strong>Tonya Blevins</strong></span>
+      <span style="display: block;"><strong>Tonya Blevins</strong></span>
       <span style="display: block;"><a href="mailto:tonya.therealtor.4u@gmail.com">tonya.therealtor.4u@gmail.com</a></span>
       <span style="display: block;"><a href="tel:4232276346">423-227-6346</a></span>
-      <input type="checkbox" id="bio-toggle-9" class="bio-toggle">
-      <label for="bio-toggle-9" class="read-more-link"><a href="#agent-9">Read Agent Bio</a></label>
+      <label class="read-more-link">Read Agent Bio</label>
       <div class="agent-bio">
         <p>
           Tonya Blevins is a devoted Christian and loves her community. She is a native of Chattanooga, Tennessee and North Georgia areas and currently resides in Ringgold, Georgia. She has been a licensed Realtor since 2022. She is licensed in both Georgia and Tennessee. She has 25+ years' experience in leadership and customer service, which has given her the skills needed in real estate. Her desire to help others is what gave her the passion to become a Realtor. She puts integrity, patience, and perseverance into the process of finding a home a success. She will pay attention to detail in each real estate transaction to make the buying/selling process go smoothly. The knowledge she has gained from mentorship and education will help her in achieving that goal. She specializes in first-time home buyers and new construction. She would love to help you and your family find your desired home.
@@ -256,15 +237,14 @@ socialImage: "./elite-gold-black.jpg"
 </div>
 
 <!-- Agent 10 -->
-<div class="agent-container" id="agent-10">
-  <div class="agent-info-container">
+<div class="agent-container">
+  <div class="agent-info-container" tabindex="0">
     <img src="https://raw.githubusercontent.com/charles-hood/redesign-elite-1/master/content/pages/about/katelynkiser.jpg" class="agent-info agent-image" />
-    <div class "agent-info">
-      <span class="agent-name"><strong>Katelyn Kiser</strong></span>
+    <div class="agent-info">
+      <span style="display: block;"><strong>Katelyn Kiser</strong></span>
       <span style="display: block;"><a href="mailto:Katelynkiser892@gmail.com">Katelynkiser892@gmail.com</a></span>
       <span style="display: block;"><a href="tel:7069782726">706-978-2726</a></span>
-      <input type="checkbox" id="bio-toggle-10" class="bio-toggle">
-      <label for="bio-toggle-10" class="read-more-link"><a href="#agent-10">Read Agent Bio</a></label>
+      <label class="read-more-link">Read Agent Bio</label>
       <div class="agent-bio">
         <p>
           I am a small-town Realtor with a forever-growing passion to learn. As a Northwest Georgia native, I have intimate knowledge of the area and surrounding areas with a strong desire to help you find your home. Raven is my beautiful daughter that makes me have a very strong will to succeed and make things happen. I treat all clients as if they are family while having a friendly demeanor and a humorous relationship with each of them.
@@ -277,15 +257,14 @@ socialImage: "./elite-gold-black.jpg"
 </div>
 
 <!-- Agent 11 -->
-<div class="agent-container" id="agent-11">
-  <div class="agent-info-container">
+<div class="agent-container">
+  <div class="agent-info-container" tabindex="0">
     <img src="https://raw.githubusercontent.com/charles-hood/redesign-elite-1/master/content/pages/about/ashleybell.jpg" class="agent-info agent-image" />
     <div class="agent-info">
-      <span class="agent-name"><strong>Ashley Bell</strong></span>
+      <span style="display: block;"><strong>Ashley Bell</strong></span>
       <span style="display: block;"><a href="mailto:ashleyblakebell@gmail.com">ashleyblakebell@gmail.com</a></span>
       <span style="display: block;"><a href="tel:4235950428">423-595-0428</a></span>
-      <input type="checkbox" id="bio-toggle-11" class="bio-toggle">
-      <label for="bio-toggle-11" class="read-more-link"><a href="#agent-11">Read Agent Bio</a></label>
+      <label class="read-more-link">Read Agent Bio</label>
       <div class="agent-bio">
         <p>
           Ashley is a lifelong resident of Northwest Georgia. She currently resides in Summerville with her husband Scott and daughter Amelia. She obtained her license in January of 2019. She has always had a love for design and real estate and finally decided to start her career in real estate! She is licensed in both the state of Georgia and Tennessee while also having referral connections in the other various states.
