@@ -66,12 +66,8 @@ socialImage: "./elite-gold-black.jpg"
   }
 </style>
 
-<!-- Agent Sections -->
-<!-- Repeat this section for each agent -->
-
 <!-- Agent 1 -->
 <div class="agent-container" id="agent1">
-  <a href="#agent1" class="read-more-link">Read More</a>
   <div class="agent-info-container">
     <img src="https://raw.githubusercontent.com/charles-hood/redesign-elite-1/master/content/pages/about/tracylee.jpg" class="agent-info agent-image" />
     <div class="agent-info">
@@ -86,11 +82,11 @@ socialImage: "./elite-gold-black.jpg"
       </p>
     </div>
   </div>
+  <Link to="#agent1" class="read-more-link">Read More</Link>
 </div>
 
 <!-- Agent 2 -->
 <div class="agent-container" id="agent2">
-  <a href="#agent2" class="read-more-link">Read More</a>
   <div class="agent-info-container">
     <img src="https://raw.githubusercontent.com/charles-hood/redesign-elite-1/master/content/pages/about/bonniehood.jpg" class="agent-info agent-image" />
     <div class="agent-info">
@@ -105,11 +101,11 @@ socialImage: "./elite-gold-black.jpg"
       </p>
     </div>
   </div>
+  <Link to="#agent2" class="read-more-link">Read More</Link>
 </div>
 
 <!-- Agent 3 -->
 <div class="agent-container" id="agent3">
-  <a href="#agent3" class="read-more-link">Read More</a>
   <div class="agent-info-container">
     <img src="https://raw.githubusercontent.com/charles-hood/redesign-elite-1/master/content/pages/about/stanhood.jpg" class="agent-info agent-image" />
     <div class="agent-info">
@@ -124,7 +120,10 @@ socialImage: "./elite-gold-black.jpg"
       </p>
     </div>
   </div>
+  <Link to="#agent3" class="read-more-link">Read More</Link>
 </div>
+
+<!-- Repeat for other agents -->
 
 <!-- Return to Home Button -->
 <div style="text-align: center; margin-top: 20px;">
